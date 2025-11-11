@@ -59,3 +59,27 @@ if st.button('결과 계산 및 시각화'):
     st.line_chart(results_df, x='Year', y='Value')
     
     st.caption('이것이 바로 클릭으로 커스터마이즈하고 Python과 연동되는 UI입니다.')
+    
+    
+    
+    #%% 광고배너 
+    
+import streamlit.components.v1 as components
+
+# 광고 배너를 넣을 HTML 코드 (예시)
+ad_html = """
+    <div style="text-align: center; padding: 10px; border: 1px solid #ccc; background-color: #f9f9f9;">
+        <h2>🌟 프리미엄 백테스트 전략 15% 할인!</h2>
+        <p>지금 바로 업그레이드하고 더 많은 데이터를 확인하세요.</p>
+        <a href="https://your-premium-link.com" target="_blank" style="padding: 5px 10px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">자세히 보기</a>
+    </div>
+"""
+
+st.header("📊 백테스트 결과")
+# ... 백테스트 결과 표시 코드 ...
+
+# 광고 삽입
+components.html(
+    ad_html,
+    height=100  # 광고 배너 높이 설정
+)
